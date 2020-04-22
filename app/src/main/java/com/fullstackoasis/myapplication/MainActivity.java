@@ -16,9 +16,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         Context applicationContext = this.getApplicationContext();
-        final WebView myWebView = new WebView(applicationContext);
-        setContentView(myWebView);
+        final WebView myWebView = findViewById(R.id.myWebView);
+        // setContentView(myWebView);
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new WebViewClient(){
@@ -32,11 +33,12 @@ public class MainActivity extends AppCompatActivity {
                     view.loadUrl(focusInputAPI23());
                     // This opens up the keyboard, but focus is not on TextInput unless
                     // you load the JavaScript above, first.
-                    imm.showSoftInput(myWebView, InputMethodManager.SHOW_IMPLICIT);
+                    imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);
                 }
             }
         });
         myWebView.loadUrl(URL);
+
     }
 
     /**
