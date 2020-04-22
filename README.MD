@@ -1,6 +1,6 @@
 # Demo of Android WebView without a Status Bar
 
-Recently, I had to customize an app that was running on Android 7 to hide the status bar. This little project demonstrates how I solved the problem.
+Recently, I had to customize an app that was runn g on Android 7 to hide the status bar. This little project demonstrates how I solved the problem.
 
 ## What is the "status bar"?
 
@@ -24,11 +24,11 @@ The [instructions to remove the status bar are available at Google's Android Dev
 
 The solution provided at the webpage above seems pretty easy. I didn't want "granular" control as described lower in the page; I just wanted that status bar to be **gone**. So I used the solution for Android 4.0 and lower. For that case, you just use an Activity theme that's "fullscreen".
 
-I set up a new project based on an old project that was similar to the work I was doing - it had a WebView of a webpage with some form elements that needed focus. In this simple project, I use the [Google URL to create an account](https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp) because it demonstrates the problem nicely. To see all the form elements, you have to scroll down.
+I set up a new project based on an old project that was similar to the work I was doing - it had a WebView of a webpage with some form elements that needed focus. In the new simple project, I use the [Google URL to create an account](https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp) because it demonstrates the problem nicely. To see all the form elements, you have to scroll down.
 
-This demo app opens a WebView of that page in Android, focus on the first text input, and open the soft keyboard so the user can immediately start typing in their info.
+This demo app opens a WebView of that page in Android, focuses on the first text input, and opens the soft keyboard so the user can immediately start typing in their info.
 
-The app works, but the status bar is visible. Here's the animation that demonstrates that:
+The app works, but the status bar is visible. Here's the animation that demonstrates that - notice the status bar with wifi, time, and other info at the top:
 
 ![Android status bar with WebView and soft keyboard](https://github.com/fullStackOasis/android-webview-textinput-no-statusbar/raw/master/1-trial-without-fullscreen.gif)
 
@@ -71,6 +71,6 @@ In the end, it was this **hack** that seemed to work:
 
 Here's a new demo that shows the `WebView` scrolling nicely, and the status bar is "gone" (I guess it's there, but invisible):
 
-![Android status bar invisible and now you can see lower text inputs even with soft keyboard](https://github.com/fullStackOasis/android-webview-textinput/raw/master/demo-android-transparent-statusbar.gif)
+![Android status bar invisible and now you can see lower text inputs even with soft keyboard](https://github.com/fullStackOasis/android-webview-textinput-no-statusbar/raw/master/demo-android-transparent-statusbar.gif)
 
 That's it, I hope it helps someone!
