@@ -1,5 +1,5 @@
 # Demo of Android WebView without a Status Bar
-https://github.com/fullStackOasis/android-webview-textinput-no-statusbar/raw/master/1-trial-without-fullscreen.gif
+
 Recently, I had to customize an app that was running on Android 7 to hide the status bar. This little project demonstrates how I solved the problem.
 
 ## What is the "status bar"?
